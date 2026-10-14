@@ -1,0 +1,8 @@
+[build]
+  base = "templates/stride"
+  command = "cd ../.. && pnpm install --frozen-lockfile && pnpm --filter './packages/**' build && pnpm --filter 'stride-template' build"
+  publish = ".next"
+
+[build.environment]
+  NODE_VERSION = "20"
+  PNPM_VERSION = "10.7.0"
